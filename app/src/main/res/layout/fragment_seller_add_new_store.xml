@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".seller.store_selection.SellerAddNewStoreFragment"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rectangle1061"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".27"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/addnewstore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="top"
+        android:text="Thêm cửa hàng mới"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+    <!--
+            android:fontFamily="@font/be_vietnam_bold"
+    -->
+
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_arrow_back_48px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <EditText
+        android:id="@+id/etStoreName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Tên quán"
+        android:textSize="16dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@color/background_color"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+    <!--        android:fontFamily="@font/be_vietnam_medium"
+    -->
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:hint="Địa chỉ quán"
+        android:textSize="16dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@color/background_color"
+        app:layout_constraintEnd_toEndOf="@+id/etStoreName"
+        app:layout_constraintStart_toStartOf="@+id/etStoreName"
+        app:layout_constraintTop_toBottomOf="@+id/etStoreName" />
+    <!--
+            android:fontFamily="@font/be_vietnam_medium"
+    -->
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:hint="Số điện thoại"
+        android:textSize="16dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@color/background_color"
+        app:layout_constraintEnd_toEndOf="@+id/etAddress"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etAddress"
+        app:layout_constraintTop_toBottomOf="@+id/etAddress" />
+    <!--
+            android:fontFamily="@font/be_vietnam_medium"
+    -->
+    <TextView
+        android:id="@+id/Cate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:gravity="top"
+        android:text="Loại quán"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#0A191E"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtChooseCategoty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber"
+        app:layout_constraintVertical_bias="0.538" />
+    <!--        android:fontFamily="@font/be_vietnam_bold"
+    -->
+
+    <TextView
+        android:id="@+id/txtChooseCategoty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Chọn loại quán"
+        android:textSize="16dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/spinner_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Cate"
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Thêm ảnh đại diện của cửa hàng"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtChooseCategoty"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <!--        android:fontFamily="@font/be_vietnam_bold"
+    -->
+    <!--    </ScrollView>-->
+
+    <ImageView
+        android:id="@+id/imgChooseStorePicture"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:src="@drawable/avt"
+        android:layout_margin="20dp"
+        android:background="@color/background_color"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/buttonAddStoretoDatabase"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_background"
+        android:text="Thêm cửa hàng"
+        android:textAllCaps="false"
+        android:textColor="#FFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!--            android:fontFamily="@font/be_vietnam_bold"
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".customer.home.myorder.orderconfirmation.OrderConfirmationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConfirmBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/activity_order_confirmation_ib_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#FFFFFF"
+                android:src="@drawable/icon_arrow_back_48px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/ConfirmTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xác nhận đơn hàng"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/ConfirmationView"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/ConfirmBar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activity_order_confirmation_cl_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/ConfirmationView">
+
+            <TextView
+                android:id="@+id/AddressTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:textSize="18dp"
+                android:text="Địa chỉ giao hàng"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingBottom="10dp"
+                android:text="Tôn Nữ Tú Quyên"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AddressTitle" />
+
+            <TextView
+                android:id="@+id/CustomerInfoLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text=" - "
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/activity_order_confirmation_customer_name"
+                app:layout_constraintTop_toBottomOf="@+id/AddressTitle" />
+            <TextView
+                android:id="@+id/activity_order_confirmation_customer_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="0123456789"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/CustomerInfoLine"
+                app:layout_constraintTop_toBottomOf="@+id/AddressTitle" />
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_shipping_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:textSize="16dp"
+                android:text="KTX KHU A"
+                app:layout_constraintTop_toBottomOf="@+id/activity_order_confirmation_customer_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/OrderConfirmationView"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/activity_order_confirmation_cl_address" />
+        <TextView
+            android:id="@+id/DeliveryTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hẹn giao - 09:40 - Ngày mai 09/04"
+            android:textSize="18dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/OrderConfirmationView"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_order_confirmation_rcv_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/DeliveryTime"/>
+        <RelativeLayout
+            android:id="@+id/activity_order_confirmation_rl_sum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/activity_order_confirmation_rcv_cart">
+
+            <TextView
+                android:id="@+id/ProductSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:textSize="18dp"
+                android:text="Tổng (2 phần)" />
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_tv_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="0 đ"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/DeliveryFeeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/activity_order_confirmation_rl_sum">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="Phí giao hàng"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginLeft="115dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="(2.4 km)"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_tv_delivery_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="0 đ"
+                android:textSize="18dp" />
+            <View
+                android:id="@+id/activity_order_confirmation_line3"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ApplyFeeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/DeliveryFeeLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:textSize="18dp"
+                android:text="Phí áp dụng" />
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_tv_apply_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="0 đ"
+                android:textSize="18dp" />
+            <View
+                android:id="@+id/activity_order_confirmation_line4"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/TotalMoneyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/ApplyFeeLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="Tổng cộng"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="0 đ"
+                android:textColor="@color/primary_dark"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_order_confirmation_tv_total"
+                android:layout_alignParentEnd="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="Đã bao gồm thuế VAT." />
+
+            <View
+                android:id="@+id/activity_order_confirmation_line5"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/DoorDeliveryFee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/TotalMoneyLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="Giao tận cửa"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/activity_order_confirmation_sc_door_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:checked="false"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="[5.000 đ]" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/activity_order_confirmation_rl_take_eating_utensils"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/DoorDeliveryFee">
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:textSize="18dp"
+                android:text="Lấy dụng cụ ăn uống"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_order_confirmation_text2"
+                android:paddingLeft="20dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="Dụng cụ ăn uống sẽ được cung cấp. Hãy chung tay bảo vệ môi trường vào lần sau nhé!" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/activity_order_confirmation_sc_take_eating_utensils"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:checked="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp" />
+            <View
+                android:id="@+id/activity_order_confirmation_line7"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/activity_order_confirmation_rl_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/activity_order_confirmation_rl_take_eating_utensils">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="Ghi chú"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_tv_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="Chưa có" />
+
+            <View
+                android:id="@+id/activity_order_confirmation_line8"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/activity_order_confirmation_rl_delivery_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/activity_order_confirmation_rl_note">
+
+            <TextView
+                android:id="@+id/activity_order_confirmation_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:text="Chọn hình thức thanh toán"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <View
+                android:id="@+id/activity_order_confirmation_line6"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+            <RadioGroup
+                android:id="@+id/activity_order_confirmation_rg_payment_method"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/activity_order_confirmation_text3"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/activity_order_confirmation_rb_online_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_margin="16dp"
+                    android:text="Thanh toán online"/>
+                <RadioButton
+                    android:id="@+id/activity_order_confirmation_rb_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:checked="true"
+                    android:layout_margin="16dp"
+                    android:text="Tiền mặt"/>
+            </RadioGroup>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/activity_order_confirmation_btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="ĐẶT ĐƠN - 0đ"
+            android:textColor="@color/primary_white"
+            android:background="@drawable/btn_background"
+            android:textAllCaps="false"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/activity_order_confirmation_rl_delivery_method"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="50dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

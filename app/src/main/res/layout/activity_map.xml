@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".customer.home.MapActivity"
+    >
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/btn_map_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/float_transparent"
+        android:src="@drawable/icon_arrow_back_48px"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        />
+    <SearchView
+        android:layout_marginTop="40dp"
+        android:id="@+id/mapSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search ..."
+        android:iconifiedByDefault="false"
+        android:elevation="5dp"
+        android:background="@drawable/btn_search_map"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/source"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Nhập địa chỉ của bạn ..."
+        android:paddingLeft="10dp"
+        android:background="@drawable/btn_search_map"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintBottom_toTopOf="@+id/destination"
+        android:layout_marginBottom="5dp"
+        />
+
+    <EditText
+        android:id="@+id/destination"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:hint="Nhập địa chỉ muốn đến ..."
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_search_map"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintBottom_toTopOf="@id/btn_go"
+        />
+    
+    <Button
+        android:id="@+id/btn_go"
+        android:text="Let's go"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_background"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+        tools:ignore="MissingConstraints,UnknownId">
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông báo"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="05dp"
+            android:background="@color/background_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text6" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:background="@drawable/circle_border"
+            android:src="@drawable/icon_campaign_48px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Tin tức"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Chưa có tin tức nào"
+            android:textColor="#9D9D9D"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/text7" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_arrow_forward_ios_48px"
+            app:layout_constraintBottom_toBottomOf="@+id/text7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Cập nhật quan trọng"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/fragment_customer_notification_rcv_notification"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@color/background_color"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/text8" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noti1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_20"
+        android:background="@color/background_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text8">
+        <TextView
+            android:id="@+id/item_notification_tv_title"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Đơn hàng tại Ha Chic - Gà Ran và Kimbap - Đường 385 đã hoàn tất"
+            android:textColor="#0A191E"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/item_notification_iv_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/item_notification_tv_content"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Hãy chia sẻ cảm nhận của bạn về đơn hàng để giúp những Khách hàng khác có thể tham khảo nhé"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_title" />
+
+        <TextView
+            android:id="@+id/item_notification_tv_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="09/05/20223 14:22"
+            android:textColor="#8E8E8E"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_content"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_content" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_notification_iv_icon"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shipper"
+            app:layout_constraintBottom_toBottomOf="@+id/noti1"
+            app:layout_constraintEnd_toEndOf="@+id/noti1"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="@+id/noti1"
+            app:layout_constraintTop_toTopOf="@id/noti1"
+            app:layout_constraintVertical_bias="0.421"
+            app:shapeAppearanceOverlay="@style/roundimageview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noti2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_20"
+        android:background="@color/background_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noti1">
+        <TextView
+            android:id="@+id/item_notification_tv_title2"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Hệ thống YUMFOOD sẽ bảo trì vào lúc 15:00 để sửa lỗi và thêm tính "
+            android:textColor="#0A191E"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/item_notification_iv_icon2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/item_notification_tv_content2"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Bảo trì cập nhật thêm vài tính năng cho ứng dụng. Mong các bạn thông cảm và hãy quay lại sau 5 tiếng nữa."
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_title2"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_title2" />
+
+        <TextView
+            android:id="@+id/item_notification_tv_date2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="09/05/2023 12:32"
+            android:textColor="#8E8E8E"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_content2"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_content2" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_notification_iv_icon2"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/maintain"
+            app:layout_constraintBottom_toBottomOf="@+id/noti2"
+            app:layout_constraintEnd_toEndOf="@+id/noti2"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="@+id/noti2"
+            app:layout_constraintTop_toTopOf="@id/noti2"
+            app:layout_constraintVertical_bias="0.421"
+            app:shapeAppearanceOverlay="@style/roundimageview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noti4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noti3">
+        <TextView
+            android:id="@+id/item_notification_tv_title4"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Thay đổi phương thức thanh toán thành công"
+            android:textColor="#0A191E"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/item_notification_iv_icon4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/item_notification_tv_content4"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Hãy chia sẻ cảm nhận của bạn về đơn hàng để giúp những Khách hàng khác có thể tham khảo nhé"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_title4"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_title4" />
+
+        <TextView
+            android:id="@+id/item_notification_tv_date4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="09/05/2023 9:06"
+            android:textColor="#8E8E8E"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_content4"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_content4" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_notification_iv_icon4"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/notify"
+            app:layout_constraintBottom_toBottomOf="@+id/noti4"
+            app:layout_constraintEnd_toEndOf="@+id/noti4"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="@+id/noti4"
+            app:layout_constraintTop_toTopOf="@id/noti4"
+            app:layout_constraintVertical_bias="0.421"
+            app:shapeAppearanceOverlay="@style/roundimageview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noti3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noti2">
+        <TextView
+            android:id="@+id/item_notification_tv_title3"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Thông báo đặt hàng thành công"
+            android:textColor="#0A191E"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/item_notification_iv_icon3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/item_notification_tv_content3"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Hãy chia sẻ cảm nhận của bạn về đơn hàng để giúp những Khách hàng khác có thể tham khảo nhé"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_title3"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_title3" />
+
+        <TextView
+            android:id="@+id/item_notification_tv_date3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="09/05/2023 11:00"
+            android:textColor="#8E8E8E"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_content3"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_content3" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_notification_iv_icon3"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/notify"
+            app:layout_constraintBottom_toBottomOf="@+id/noti3"
+            app:layout_constraintEnd_toEndOf="@+id/noti3"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="@+id/noti3"
+            app:layout_constraintTop_toTopOf="@id/noti3"
+            app:layout_constraintVertical_bias="0.421"
+            app:shapeAppearanceOverlay="@style/roundimageview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noti5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noti4">
+        <TextView
+            android:id="@+id/item_notification_tv_title5"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Thay đổi trạng thái giao "
+            android:textColor="#0A191E"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/item_notification_iv_icon5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/item_notification_tv_content5"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Hãy chia sẻ cảm nhận của bạn về đơn hàng để giúp những Khách hàng khác có thể tham khảo nhé"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_title5"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_title5" />
+
+        <TextView
+            android:id="@+id/item_notification_tv_date5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="09/05/2023 8:46"
+            android:textColor="#8E8E8E"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/item_notification_tv_content5"
+            app:layout_constraintTop_toBottomOf="@+id/item_notification_tv_content5" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_notification_iv_icon5"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/notify"
+            app:layout_constraintBottom_toBottomOf="@+id/noti5"
+            app:layout_constraintEnd_toEndOf="@+id/noti5"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="@+id/noti5"
+            app:layout_constraintTop_toTopOf="@id/noti5"
+            app:layout_constraintVertical_bias="0.421"
+            app:shapeAppearanceOverlay="@style/roundimageview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

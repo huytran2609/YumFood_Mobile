@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/StoreImageLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/StoreImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary_white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pizza"/>
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icon_arrow_back_48px"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/StoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="Cửa hàng pizza"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/StoreImageLayout" />
+
+            <RatingBar
+                android:id="@+id/StoreRatingBar"
+                style="@style/CustomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:isIndicator="false"
+                android:rating="4.5"
+                android:stepSize="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/StoreName" />
+
+            <TextView
+                android:id="@+id/StoreRatingNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:text="4.5"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/StoreRatingBar"
+                app:layout_constraintTop_toBottomOf="@+id/StoreName" />
+
+            <TextView
+                android:id="@+id/StoreDeliveryTime"
+                android:layout_width="48dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/time_background"
+                android:gravity="center"
+                android:text="20 phút"
+                android:textAlignment="center"
+                android:textColor="@color/primary_dark"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/StoreRatingNumber"
+                app:layout_constraintTop_toBottomOf="@+id/StoreName" />
+
+            <ImageView
+                android:id="@+id/StoreWishList"
+                android:layout_width="22dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_heart_blank_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/StoreName" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/StoreTab"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:tabTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/StoreRatingBar"
+                app:tabIndicatorFullWidth="false">
+            </com.google.android.material.tabs.TabLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StoreTab"
+        app:layout_constraintBottom_toTopOf="@+id/StoreRevenueLayout">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/StoreRevenueLayout">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/StoreViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/StoreRevenueLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/StoreCart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:padding="1dp"
+            android:src="@drawable/shopping_cart_48px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/store_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/store_btn_delivery"
+            android:gravity="center_vertical"
+            android:text="4.000 đ"
+            android:textColor="@color/primary_color"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/StoreCart"
+            app:layout_constraintEnd_toStartOf="@+id/store_btn_delivery"
+            app:layout_constraintTop_toTopOf="@+id/StoreCart" />
+
+        <android.widget.Button
+            android:id="@+id/store_btn_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/primary_color"
+            android:padding="10dp"
+            android:text="Giao hàng"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

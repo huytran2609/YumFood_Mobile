@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize_15">15sp</dimen>
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="distance_10">10dp</dimen>
+    <dimen name="distance_16">16dp</dimen>
+    <dimen name="distance_20">20dp</dimen>
+    <dimen name="distance_50">50dp</dimen>
+    <dimen name="distance_100">100dp</dimen>
+    <dimen name="distance_150">150dp</dimen>
+    <dimen name="distance_170">170dp</dimen>
+    <dimen name="distance_200">200dp</dimen>
+    <dimen name="distance_300">300dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="distance_900">900dp</dimen>
+</resources>

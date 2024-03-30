@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#25FFFFFF"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/img_bg_logo_login"
+        android:layout_width="179dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_logo_login"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_bg_logo_login"
+        app:layout_constraintEnd_toEndOf="@+id/img_bg_logo_login"
+        app:layout_constraintStart_toStartOf="@+id/img_bg_logo_login"
+        app:layout_constraintTop_toTopOf="@+id/img_bg_logo_login" />
+
+    <TextView
+        android:id="@+id/txt_taotaikhoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tạo tài khoản"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="150dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/primary_color"
+        app:layout_constraintTop_toBottomOf="@+id/txt_taotaikhoan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/regis_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/css_bg_txt"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:hint="Họ tên"
+        android:padding="14dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_taotaikhoan" />
+
+    <EditText
+        android:id="@+id/regis_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/css_bg_txt"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:hint="Email"
+        android:padding="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regis_fullname" />
+
+    <EditText
+        android:id="@+id/regis_sdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/css_bg_txt"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:hint="Số điện thoại"
+        android:padding="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regis_email" />
+
+    <EditText
+        android:id="@+id/regis_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/css_bg_txt"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:hint="Mật khẩu"
+        android:padding="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regis_sdt" />
+
+    <EditText
+        android:id="@+id/regis_confirmpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/css_bg_txt"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:hint="Xác nhận mật khẩu"
+        android:padding="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regis_password" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/css_btn_login"
+        android:layout_marginTop="30dp"
+        android:padding="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/regis_confirmpass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_cotaikhoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="60dp"
+        android:text="Bạn đã có tài khoản?"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.359"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_dangnhap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="60dp"
+        android:padding="5dp"
+        android:text="@string/dangnhap"
+        android:textColor="@color/primary_color"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toEndOf="@+id/txt_cotaikhoan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

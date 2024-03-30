@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".seller.order_detail.SellerOrderDetailActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/activity_merchant_order_detail_iv_btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_arrow_back_48px" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/activity_merchant_order_detail_iv_btn_back"
+                android:text="Chi tiết đơn hàng"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/activity_merchant_order_detail_cl_shipping_info2"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="#c0c0c0"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_customer_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_cl_shipping_info2">
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khách hàng A"
+                android:textColor="#000000"
+                android:layout_marginStart="16dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+<!--
+                            android:fontFamily="@font/be_vietnam_bold"
+-->
+
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Mã đơn: "
+                android:textSize="14sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_customer_name" />
+
+<!--
+                android:fontFamily="@font/be_vietnam_bold"
+-->
+
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Thời gian đặt: "
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_12" />
+<!--
+                android:fontFamily="@font/be_vietnam_bold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_oder_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Giao hàng thành công"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_merchant_order_detail_tv_14"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_14" />
+<!--
+                android:fontFamily="@font/be_vietnam_bold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="30/5/2022"
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_merchant_order_detail_tv_14"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_12" />
+<!--
+                android:fontFamily="@font/be_vietnam_bold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lần đầu đặt"
+                android:layout_marginTop="8dp"
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_merchant_order_detail_tv_12"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_customer_name" />
+<!--
+                android:fontFamily="@font/be_vietnam_bold"
+-->
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/activity_merchant_order_detail_appCompatImageButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_phone"
+                app:layout_constraintEnd_toStartOf="@+id/activity_merchant_order_detail_appCompatImageButton2"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/activity_merchant_order_detail_appCompatImageButton2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_print_48px"
+                app:layout_constraintEnd_toStartOf="@+id/activity_merchant_order_detail_appCompatImageButton3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/activity_merchant_order_detail_appCompatImageButton3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_sms_48px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activity_merchant_order_detail_cl_shipping_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/cl_customer_info">
+
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Địa chỉ giao hàng"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_receiver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Nguyễn Văn A"
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_textView14" />
+<!--                android:fontFamily="@font/be_vietnam_medium"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_shipping_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="220/17 Phạm Văn Thuận, TP. Biên Hòa - Đồng Nai"
+
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_receiver" />
+<!--                android:fontFamily="@font/be_vietnam_medium"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=" - "
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_merchant_order_detail_receiver"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_textView14" />
+<!--                android:fontFamily="@font/be_vietnam_medium"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0365990290"
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_merchant_order_detail_tv_13"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_textView14" />
+<!--                android:fontFamily="@font/be_vietnam_medium"
+-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/activity_merchant_order_detail_constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_cl_shipping_info">
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_store_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Bún Đậu Mắm Tôm"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_store_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="220/17 Phạm Văn Thuận, TP. Biên Hòa - Đồng Nai"
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_store_name" />
+<!--                android:fontFamily="@font/be_vietnam_medium"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_shipper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Shipper: "
+
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_store_address" />
+<!--                android:fontFamily="@font/be_vietnam_medium"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_shipper_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nguyễn Thị B"
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_merchant_order_detail_tv_shipper"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_store_address" />
+<!--                android:fontFamily="@font/be_vietnam_medium"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_shipper_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0305478845"
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_merchant_order_detail_tv_16"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_store_address" />
+<!--                android:fontFamily="@font/be_vietnam_medium"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=" - "
+
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_merchant_order_detail_tv_shipper_name"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_store_address" />
+<!--                android:fontFamily="@font/be_vietnam_medium"
+-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_merchant_order_detail_rcvOrder"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_16" />
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="TỔNG CỘNG "
+                android:textStyle="bold"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_rcvOrder" />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_count_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(10 món): "
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/activity_merchant_order_detail_tv_40"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_rcvOrder" />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+                app:layout_constraintBottom_toTopOf="@+id/activity_merchant_order_detail_btn_reject"
+
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_sub_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:text="5.0000 ₫"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_rcvOrder" />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_take_eating_utensils"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Giao hàng tận cửa [5.0000 ₫]"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_40" />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_take_eating_utensils2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lấy dụng cụ ăn uống"
+                android:textSize="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_take_eating_utensils" />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <CheckBox
+                android:id="@+id/activity_merchant_order_detail_ckb_door_delivery"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_40" />
+
+            <CheckBox
+                android:id="@+id/activity_merchant_order_detail_ckb_take_eating_utensils"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_ckb_door_delivery" />
+
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Phí giao hàng "
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_take_eating_utensils2" />
+<!--                            android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="(2.3 km)"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/activity_merchant_order_detail_tv_43"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_take_eating_utensils2" />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Phí áp dụng"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_43" />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_shipping_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.0000 ₫"
+                android:textSize="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/activity_merchant_order_detail_tv_take_eating_utensils2"
+                />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_apply_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.0000 ₫"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_merchant_order_detail_tv_43" />
+<!--                            android:fontFamily="@font/be_vietnam_semibold"
+-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activity_merchant_order_detail_constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/activity_merchant_order_detail_imageView4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/ic_account_balance_wallet_48px"
+                app:layout_constraintBottom_toTopOf="@+id/activity_merchant_order_detail_btn_accept"
+                app:layout_constraintEnd_toStartOf="@+id/activity_merchant_order_detail_tv_93" />
+
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_93"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingTop="10dp"
+                android:text="THÀNH TIỀN: "
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/activity_merchant_order_detail_btn_accept"
+                app:layout_constraintEnd_toStartOf="@+id/activity_merchant_order_detail_tv_total" />
+<!--                            android:fontFamily="@font/be_vietnam_semibold"
+-->
+
+            <TextView
+                android:id="@+id/activity_merchant_order_detail_tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:text="857.858 đ"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/activity_merchant_order_detail_btn_accept"
+                app:layout_constraintEnd_toEndOf="parent" />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <android.widget.Button
+                android:id="@+id/activity_merchant_order_detail_btn_accept"
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background"
+                android:text="Xác nhận"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+<!--                android:fontFamily="@font/be_vietnam_semibold"
+-->
+            <android.widget.Button
+                android:id="@+id/activity_merchant_order_detail_btn_reject"
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_background"
+                android:text="Từ chối"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+<!--                android:fontFamily="@font/be_vietnam_bold"
+-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

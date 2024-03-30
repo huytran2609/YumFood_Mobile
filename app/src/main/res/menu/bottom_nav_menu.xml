@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/nav_order"
+        android:title="@string/donhang"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_orders_black_24dp"/>
+    <item android:id="@+id/nav_menu"
+        android:title="@string/menu"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_menu_black_24dp"/>
+    <item android:id="@+id/nav_dashboard"
+        android:title="@string/thongke"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_statistic_black_24dp"/>
+    <item android:id="@+id/nav_setting"
+        android:title="@string/toi"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_setting_black_24dp"/>
+</menu>

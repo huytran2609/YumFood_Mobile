@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_shipper_delivering"
+    android:background="@color/white"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/txt_delivering_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10/5/2023"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="26.000 đ"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.6km"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_delivering_date"
+        app:layout_constraintEnd_toStartOf="@+id/txt_delivering_fee"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/view_line1_delivering"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@color/primary_grey"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_distance"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_tongdon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng đơn: "
+        android:textSize="14sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line1_delivering"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="46.000 đ"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/purple_700"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_delivering_tongdon"
+        app:layout_constraintTop_toBottomOf="@+id/view_line1_delivering"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_received"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="72.000 đ"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line1_delivering"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_tongthu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng thu: "
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_delivering_received"
+        app:layout_constraintTop_toBottomOf="@+id/view_line1_delivering"/>
+
+    <View
+        android:id="@+id/view_line2_delivering"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primary_grey"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_tongdon"/>
+
+    <View
+        android:id="@+id/view_sign1_delivering"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/css_btn_login"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line2_delivering"/>
+    <TextView
+        android:id="@+id/txt_delivering_diemBD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm bắt đầu: "
+        android:textSize="13sp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toEndOf="@+id/view_sign1_delivering"
+        app:layout_constraintTop_toBottomOf="@+id/view_line2_delivering"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trà sữa Maycha"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_delivering_diemBD"
+        app:layout_constraintTop_toBottomOf="@+id/view_line2_delivering"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_start_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="55/35, khu phố Tân Lập, phường Đông Hòa, TP.Dĩ An, Bình Dương"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toEndOf="@+id/view_sign1_delivering"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_diemBD"/>
+
+    <View
+        android:id="@+id/view_sign2_delivering"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/css_bg_btn"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_start_address"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_diemKT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm kết thúc: "
+        android:textSize="13sp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toEndOf="@+id/view_sign2_delivering"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_start_address"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_cus_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mỹ Trân"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_delivering_diemKT"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_start_address"/>
+
+    <TextView
+        android:id="@+id/txt_delivering_end_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KTX khu B, ĐHQG, TP Hồ Chí Minh"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toEndOf="@+id/view_sign2_delivering"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_diemKT"/>
+
+    <View
+        android:id="@+id/view_line3_delivering"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primary_grey"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_end_address"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_delivering_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_end_address" />
+
+    <TextView
+        android:id="@+id/txt_delivering_giaohangtancua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Giao hàng tận cửa"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/view_sign2_delivering"
+        app:layout_constraintTop_toBottomOf="@+id/rcv_delivering_products" />
+
+    <CheckBox
+        android:id="@+id/ckb_delivering_door"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcv_delivering_products" />
+
+
+    <TextView
+        android:id="@+id/txt_delivering_laydungcu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Lấy dụng cụ ăn uống"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/view_sign2_delivering"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_giaohangtancua" />
+
+    <CheckBox
+        android:id="@+id/ckb_delivering_utensil"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ckb_delivering_door" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_delivering_accept"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/css_btn_login"
+        android:text="Xác nhận giao hàng thành công"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_delivering_laydungcu" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<!--    tao quyen knoi mang-->
+<!--    Cap quyen truy cap vao vi tri cua mt-->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.YUMFOOD"
+        tools:targetApi="31">
+
+<!--        <meta-data-->
+<!--            android:name="com.google.android.geo.API_KEY"-->
+<!--            android:value="AIzaSyCHuHR6AgisVFhl0HyGTKFk9fQIEb4-KsM" />-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBnHGNoiS7uqilxPTK_g_T4Ek87NfuYIVA" />
+<!--      Khai bao use API của gg map-->
+        <activity
+            android:name=".customer.product_detail.ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.home.myorder.orderhistory.WriteStoreReview"
+            android:exported="false" />
+        <activity
+            android:name=".customer.home.myorder.orderconfirmation.address.CustomerOrderAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.cart.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.home.myorder.orderconfirmation.OrderConfirmationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.product.ProductDetail"
+            android:exported="false"
+            android:label="@string/title_activity_order_confirmation"
+            android:theme="@style/Theme.YUMFOOD.NoActionBar" />
+        <activity
+            android:name=".customer.store_detail.StoreDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.order_detail.SellerOrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".IntroductoryActivity"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.store_management.SellerManageMenu.product.SellerUpdateProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.home.myorder.orderdetail.CustomerOrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.store_management.SellerManageMenu.product.SellerAddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.store_management.SellerStoreManagementActivity"
+            android:exported="true" />
+        <activity
+            android:name=".seller.store_management.SellerManageMenu.topping.SellerAddToppingActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".seller.store_selection.SellerStoreSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.store_management.SellerManageMenu.product_grouping.SellerAddProductGroupingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".shipper.ShipperActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.yumfood.customer.home.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IntroductoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
